@@ -20,8 +20,8 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('jobs', views.get_jobs, name='jobs'),
-    path('job/<int:job_id>', views.get_job, name='job'),
+    path('jobs', views.get_jobs, name='jobs_list'),
+    path('job/<int:job_id>', views.get_job, name='job_detail'),
     path('certifications', views.get_certifications, name='certifications'),
     path('certification', views.get_certification, name='certification')
 ]
