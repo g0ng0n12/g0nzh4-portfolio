@@ -13,15 +13,41 @@
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}" type="text/css" media="all">
     <link rel="stylesheet" href="{% static 'css/skeleton.css' %}" type="text/css" media="all">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/all.css' %}" type="text/css" media="all">
 
     <!-- FONTZ --------------------------------------------------->
     <link href="https://fonts.googleapis.com/css?family=Abel|Satisfy&display=swap" rel="stylesheet">
 </head>
 <body>
-<div>
+<header class="main_nav">
+    <div class="container">
+        <div class="twelve columns">
+
+        </div>
+    </div>
+</header>
+
+
+<div class="container main">
+
     {% block content %}
 
     {% endblock %}
 </div>
+
+<div class="row green">
+    <div class="container">
+        <div class="four columns"></div>
+        <div class="eight columns"></div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row twelve columns"></div>
+        <div class="row twelve columns"></div>
+    </div>
+</footer>
+
 </body>
 </html>
