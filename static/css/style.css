@@ -14,7 +14,6 @@
 .main{padding-top: 3%;}
 .row{padding: 2% 0%}
 .green {background-color: #7accc8;}
-
 /* Navigation Bar
 ----------------------------------------------------*/
 *{
@@ -33,7 +32,16 @@ nav {
     color: rgb(226, 226, 226);
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 20px;
+}
+.logo h1 {
+    font-size: 0.5em;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+.logo h4 {
+    font-size: 2em;
+    letter-spacing: 5px;
+    margin-bottom: 0;
 }
 .nav-links{
     display:flex;
@@ -95,9 +103,6 @@ img.avatar {
     border-radius: 400px;
     border: 5px solid #fff;
 }
-img:hover {
-    opacity: 0.8;
-}
 /* Footer
 ----------------------------------------------------*/
 ul.social{
@@ -129,7 +134,7 @@ p.copyright{
 /* Media Queries
 ----------------------------------------------------*/
 @media (max-width: 479px){
-        .main {padding-top: 15%;}
+    .main {padding-top: 15%;}
     .portfolio img{ margin-bottom: 10%;}
     img.avatar{margin-top: 15%;}
     h2.bio{font-size: 2.5em;}
@@ -145,6 +150,13 @@ p.copyright{
 @media screen and (max-width: 768px){
     body{
         overflow-x: hidden;
+    }
+    h4 {
+        margin-bottom: 0;
+    }
+    .about-me {
+        position: Relative;
+        z-index: -1;
     }
     .nav-links {
         position: absolute;
@@ -168,7 +180,6 @@ p.copyright{
     }
 }
 
-
 .nav-active {
     transform: translateX(0%);
 }
@@ -186,9 +197,11 @@ p.copyright{
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px, 6px);
 }
+
 .toggle .line2{
     opacity: 0;
 }
+
 .toggle .line3{
     transform: rotate(45deg) translate(-5px, -6px);
 }
