@@ -19,9 +19,9 @@ def get_job(request, job_id):
 
 def get_certifications(request):
     certifications = Certification.objects.all()
-    return render(request, 'certifications/list.html', {'jobs': certifications})
+    return render(request, 'certifications/certifications_list.html', {'jobs': certifications})
 
 
 def get_certification(request, certification_id):
     certification = get_object_or_404(Certification, pk=certification_id)
-    return render(request, 'certifications/detail.html', {'certification': certification})
+    return render(request, 'certifications/certification_detail.html', {'certification': certification})
