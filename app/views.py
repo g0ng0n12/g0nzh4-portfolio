@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Job, Certification
+from .models import Job, Certification, Project
 
 
 # Create your views here.
@@ -25,3 +25,13 @@ def get_certifications(request):
 def get_certification(request, certification_id):
     certification = get_object_or_404(Certification, pk=certification_id)
     return render(request, 'certifications/certification_detail.html', {'certification': certification})
+
+
+def get_projects(request):
+    projects = Project.objects.all()
+    return render(request, 'projects/project_list.html', {'projects': projects})
+
+
+def get_project(request, project_id):
+    project = get_object_or_404(Project, pk=project_id)
+    return render(request, 'projects/project_details.html', {'project': project})

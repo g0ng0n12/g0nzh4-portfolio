@@ -24,5 +24,7 @@ urlpatterns = [
     path('jobs', views.get_jobs, name='jobs_list'),
     path('job/<int:job_id>', views.get_job, name='job_detail'),
     path('certifications', views.get_certifications, name='certifications'),
-    path('certification', views.get_certification, name='certification')
+    path('certifications/<int:certification_id>', views.get_certification, name='certification_detail'),
+    path('projects', views.get_projects, name='projects'),
+    path('projects/<int:project_id>', views.get_project, name='project_details')
 ]
