@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Job, Certification, Project
 
-# Register your models here.
+
+admin.site.register(Job)
+admin.site.register(Certification)
+admin.site.register(Project)
