@@ -3,6 +3,10 @@ from .models import Job, Certification
 
 
 # Create your views here.
+def home(request):
+    return render(request, 'index.html')
+
+
 def get_jobs(request):
     jobs = Job.objects.all()
     return render(request, 'jobs/jobs_list.html', {'jobs': jobs})

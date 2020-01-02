@@ -1,6 +1,7 @@
 /* Table of Contents
 ----------------------------------------------------
 - General Content
+- Navigation Bar
 - Typography
 - Header & Navigation
 - Images & Media
@@ -13,6 +14,56 @@
 .main{padding-top: 3%;}
 .row{padding: 2% 0%}
 .green {background-color: #7accc8;}
+
+/* Navigation Bar
+----------------------------------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Abel', sans-serif;
+}
+.logo {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.nav-links{
+    display:flex;
+    width: 30%;
+    justify-content: space-around;
+    margin-bottom: 0;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.burger {
+    display: none;
+    cursor: pointer;
+}
+.burger div {
+    width: 25px;
+    height:3px;
+    margin: 5px;
+    background-color: rgb(226, 226, 226);
+    transition: all 0.3s ease
+}
+
+
 
 /* Typography
 ----------------------------------------------------*/
@@ -35,23 +86,6 @@ p.bio{color:#fff}
 header.main_nav {
     padding: 1% 0;
     display: block;
-}
-.logo{
-    margin: 5% auto;
-    text-align: center;
-}
-.logo a{
-    font-size: 3em;
-    color: #fff;
-    text-decoration: none;
-    border: 3px solid #fff;
-    text-transform: uppercase;
-    padding:2px 10px 0 10px;
-    margin: 0;
-}
-.logo a:hover{
-    background-color: #fff;
-    color: #7accc8;
 }
 
 /* Images & Media
@@ -94,13 +128,67 @@ p.copyright{
 }
 /* Media Queries
 ----------------------------------------------------*/
-/* Larger than mobile */
 @media (max-width: 479px){
-    .logo a{font-size: 1em;}
-    .main {padding-top: 15%;}
+        .main {padding-top: 15%;}
     .portfolio img{ margin-bottom: 10%;}
     img.avatar{margin-top: 15%;}
     h2.bio{font-size: 2.5em;}
     p.bio {font-size: 1.25em; color: #3f7f7c}
     ul.social li a {font-size: .75em; }
+}
+
+@media screen and (max-width: 1024px){
+    .nav-links {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #7accc8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
 }
