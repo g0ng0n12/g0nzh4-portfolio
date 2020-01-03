@@ -10,7 +10,7 @@ def home(request):
 
 
 def get_jobs(request):
-    jobs = list(Job.objects.all())
+    jobs = Job.objects.order_by('-end_date')
     return render(request, 'jobs/jobs_list.html', {'jobs': jobs})
 
 
