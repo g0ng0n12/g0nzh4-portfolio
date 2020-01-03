@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Job, Certification, Project
+from django.http import JsonResponse, HttpResponse
+import json
 
 
 # Create your views here.
@@ -8,13 +10,14 @@ def home(request):
 
 
 def get_jobs(request):
-    jobs = Job.objects.all()
+    jobs = list(Job.objects.all())
     return render(request, 'jobs/jobs_list.html', {'jobs': jobs})
 
 
 def get_job(request, job_id):
     job = get_object_or_404(Job, pk=job_id)
-    return render(request, 'jobs/job_detail.html', {'job': job})
+    return JsonResponse(job)
+    # return HttpResponse(json.dumps(job), content_type="application/json")
 
 
 def get_certifications(request):

@@ -149,7 +149,7 @@ img.avatar {
     list-style: none
 }
 
-.work_exp li:before {
+.work_exp .jobs .job:before {
     content: "";
     position: absolute;
     top: 5px;
@@ -160,7 +160,7 @@ img.avatar {
     border: 2px solid #3f7f7c;
 }
 
-.work_exp li:after {
+.work_exp .jobs .job:after {
     content: "";
     position: absolute;
     top: 14px;
@@ -174,14 +174,92 @@ img.avatar {
     margin-bottom: 20px;
 }
 
+
+.work_exp .info a{
+    font-size: 1em;
+}
+
 .work_exp ul li:last-child .info {
     margin-bottom: 0;
 }
 
-.work_exp .date {
-    font-size: 16px;
+.work_exp .job-title {
+    font-size: 1.5em;
+    font-family: 'abel', sans-serif;
+    margin-bottom:0;
     font-weight: 500;
-    margin-bottom: 15px;
+    color: #3f7f7c;
+}
+.work_exp .job-project {
+    margin-bottom: 0;
+    font-size: 1em;
+}
+
+.work_exp .date {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.work_exp .technologies {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.work_exp .tags {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.work_exp .tags li {
+    float: left;
+}
+
+.work_exp .tag {
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+    color: #999;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px 0 23px;
+    position: relative;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
+}
+
+.work_exp .tag::before {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+    content: '';
+    height: 6px;
+    left: 10px;
+    position: absolute;
+    width: 6px;
+    top: 10px;
+}
+
+.work_exp .tag::after {
+    background: #fff;
+    border-bottom: 13px solid transparent;
+    border-left: 10px solid #eee;
+    border-top: 13px solid transparent;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.work_exp .tag:hover {
+    background-color: #7accc8;
+    color: white;
+}
+
+.work_exp .tag:hover::after {
+    border-left-color: #7accc8;
 }
 
 /* Footer

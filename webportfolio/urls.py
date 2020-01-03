@@ -15,16 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app import views
+from app import views, api_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('jobs', views.get_jobs, name='jobs_list'),
-    path('job/<int:job_id>', views.get_job, name='job_detail'),
+    path('jobs/<int:job_id>', views.get_job, name='job_detail'),
     path('certifications', views.get_certifications, name='certifications'),
     path('certifications/<int:certification_id>', views.get_certification, name='certification_detail'),
     path('projects', views.get_projects, name='projects'),
-    path('projects/<int:project_id>', views.get_project, name='project_details')
+    path('projects/<int:project_id>', views.get_project, name='project_details'),
+
+    # API endpoints
+    path('api/v1/jobs/<int:id>', api_views.JobList.as_view()),
+
 ]
