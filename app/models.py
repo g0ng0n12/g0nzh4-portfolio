@@ -20,12 +20,14 @@ class Job(models.Model):
     company = models.CharField(max_length=50)
     url_company = models.URLField(max_length=200, null=True)
     project = models.CharField(max_length=50, null=True)
+    url_project = models.URLField(max_length=200, null=True)
     location = models.CharField(max_length=50)
     employment_type = models.CharField(choices=EMPLOYMENT_TYPE, max_length=70)
     image = models.ImageField(blank=True, null=True, default=None, upload_to='images/')
-    description = models.CharField(max_length=200)
+    description = models.TextField(null=True, blank=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
+    current = models.BooleanField(default=False)
     technologies = models.ManyToManyField(Technology)
 
     def __str__(self):

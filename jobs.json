@@ -1,0 +1,436 @@
+[
+  {
+    "model": "app.technology",
+    "pk": 7,
+    "fields": {
+      "name": "Java",
+      "yoe": 10
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 8,
+    "fields": {
+      "name": "REST",
+      "yoe": 10
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 9,
+    "fields": {
+      "name": "Python",
+      "yoe": 2
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 10,
+    "fields": {
+      "name": "Django",
+      "yoe": 2
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 11,
+    "fields": {
+      "name": "Javascript",
+      "yoe": 3
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 12,
+    "fields": {
+      "name": "ReactJs",
+      "yoe": 3
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 13,
+    "fields": {
+      "name": "NodeJs",
+      "yoe": 1
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 14,
+    "fields": {
+      "name": "Spring Framework",
+      "yoe": 10
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 15,
+    "fields": {
+      "name": "Mockito",
+      "yoe": 10
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 16,
+    "fields": {
+      "name": "Maven",
+      "yoe": 10
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 17,
+    "fields": {
+      "name": "Git",
+      "yoe": 10
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 18,
+    "fields": {
+      "name": "Agile-Scrum",
+      "yoe": 10
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 19,
+    "fields": {
+      "name": "Agile-Kanban",
+      "yoe": 2
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 20,
+    "fields": {
+      "name": "Jboss Middleware",
+      "yoe": 1
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 21,
+    "fields": {
+      "name": "ApacheCFX",
+      "yoe": 3
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 22,
+    "fields": {
+      "name": "ActiveMQ",
+      "yoe": 2
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 23,
+    "fields": {
+      "name": "ReduxSagas",
+      "yoe": 2
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 24,
+    "fields": {
+      "name": "VueJs",
+      "yoe": 1
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 25,
+    "fields": {
+      "name": "Jbehave",
+      "yoe": 3
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 26,
+    "fields": {
+      "name": "Ruby",
+      "yoe": 2
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 27,
+    "fields": {
+      "name": "RubyOnRails",
+      "yoe": 2
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 28,
+    "fields": {
+      "name": "Google Cloud",
+      "yoe": 2
+    }
+  },
+  {
+    "model": "app.technology",
+    "pk": 29,
+    "fields": {
+      "name": "Amazon AWS",
+      "yoe": 2
+    }
+  },
+  {
+    "model": "app.job",
+    "pk": 1,
+    "fields": {
+      "title": "Software Developer",
+      "company": "Despegar.com",
+      "url_company": "http://www.despegar.com",
+      "project": "Grandes Cuentas",
+      "url_project": null,
+      "location": "Argentina",
+      "employment_type": "FULL-TIME",
+      "image": "images/Screen_Shot_2020-01-03_at_19.20.31.png",
+      "description": "- Utilized knowledge of ReactJs to supplement Java development\r\n- Developed robust Java code for Rest APIs\r\n- Collaborated in team-based, Agile environment to accomplish objectives in a measured and open manner using Kanban\r\n- Performed troubleshooting, diagnostics and analysis to uncover root malfunctions\r\n- Reviewed code and debugged errors to improve performance\r\n- Participated in requirements gathering and design development meetings\r\n- Recognized as subject matter expert for Rest API Design",
+      "start_date": "2018-09-01T22:24:47Z",
+      "end_date": "2019-04-30T22:25:05Z",
+      "current": false,
+      "technologies": [
+        7,
+        8,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        19
+      ]
+    }
+  },
+  {
+    "model": "app.job",
+    "pk": 2,
+    "fields": {
+      "title": "Java Developer - Tech Lead",
+      "company": "Globant",
+      "url_company": "http://www.globant.com",
+      "project": "Disney Travel Agents sustainment team",
+      "url_project": "https://www.disneytravelagents.com/",
+      "location": "Argentina",
+      "employment_type": "FULL-TIME",
+      "image": "",
+      "description": "- Worked as a Team Leader of the Disney Travel Agents sustainment team\r\n- Worked closely with Business Team to efficiently resolve high priorities issues\r\n- Modified existing web services to correct errors, upgrade interfaces and improve performance\r\n- Performed all testing and troubleshooting methods and documented resolutions in the Disney travel Agent flow\r\n- Served as one of the technical point-of-contact for project management staff\r\n- Lead a team of 10 developers in the analysis and troubleshoot high priority issues",
+      "start_date": "2017-12-01T22:29:56Z",
+      "end_date": "2018-08-01T22:30:07Z",
+      "current": false,
+      "technologies": [
+        7,
+        8,
+        14,
+        15,
+        16,
+        17,
+        19,
+        25,
+        29
+      ]
+    }
+  },
+  {
+    "model": "app.job",
+    "pk": 3,
+    "fields": {
+      "title": "FullStack Developer",
+      "company": "Globant",
+      "url_company": "http://www.globant.com",
+      "project": "BetterMe & TakePart",
+      "url_project": "https://os.starmeup.com/en/",
+      "location": "Argentina",
+      "employment_type": "FULL-TIME",
+      "image": "images/Screen_Shot_2020-01-03_at_19.33.43.png",
+      "description": "- Modified existing software to correct errors, adapt to new hardware and improve performance\r\n- Designed RestFulWebServicescomponents using Java 8\r\n- Identified and eliminated website bugs to improve user experience\r\n- Developed thewebapp using ES2016 + ReactJs\r\n- Performed regression and system-level testing to verify software quality and function before it was released",
+      "start_date": "2017-05-01T22:34:48Z",
+      "end_date": "2017-12-01T22:34:58Z",
+      "current": false,
+      "technologies": [
+        8,
+        11,
+        12,
+        13,
+        17,
+        19,
+        23,
+        24,
+        29
+      ]
+    }
+  },
+  {
+    "model": "app.job",
+    "pk": 4,
+    "fields": {
+      "title": "Service Now Developer",
+      "company": "Globant",
+      "url_company": "http://www.globant.com",
+      "project": "Disney Platform Team (Globant Contractor)",
+      "url_project": "https://disneyworld.disney.go.com/",
+      "location": "Argentina",
+      "employment_type": "FULL-TIME",
+      "image": "",
+      "description": "- Collaborated with other developers to identify and alleviate the number of bugs in the software\r\n- Collaborated with developers and performance engineers to enhance supportability and identify performance bottlenecks\r\n- Analysed and designed relational databases using Service Now Platform\r\n- Designed and delivered new RestAPI using Service Now and Javascript\r\n- Worked closely with clients to establish problem specifications and system designs",
+      "start_date": "2016-12-01T22:37:59Z",
+      "end_date": "2017-05-01T22:38:10Z",
+      "current": false,
+      "technologies": [
+        8,
+        11,
+        17,
+        18
+      ]
+    }
+  },
+  {
+    "model": "app.job",
+    "pk": 5,
+    "fields": {
+      "title": "Java Developer - Tech Lead",
+      "company": "Globant",
+      "url_company": "http://www.globant.com",
+      "project": "Disney Parks and Resorts Online",
+      "url_project": "https://disneyworld.disney.go.com/",
+      "location": "Argentina",
+      "employment_type": "FULL-TIME",
+      "image": "images/Screen_Shot_2020-01-03_at_19.39.26.png",
+      "description": "- My main objective was to organize the team efforts and guide the developers to achieve the different goals that the team had.\r\n- I was always in direct contact with the client where I tried to gather critical information to help the team to finish the sprint with all the stories completed.\r\n- I helped the technical leads from the others teams with the estimation and planning of the main project.\r\n- Designed of new APIs and Code Reviews\r\n- Estimation, evaluation, and implementation of new in-house solutions to replace or improve existing applications",
+      "start_date": "2015-03-01T22:42:55Z",
+      "end_date": "2016-12-01T22:43:11Z",
+      "current": false,
+      "technologies": [
+        7,
+        8,
+        14,
+        15,
+        16,
+        17,
+        18,
+        25
+      ]
+    }
+  },
+  {
+    "model": "app.job",
+    "pk": 6,
+    "fields": {
+      "title": "Java Developer",
+      "company": "Flux-It",
+      "url_company": "https://www.fluxitsoft.com/en/home/",
+      "project": "TecPlata",
+      "url_project": "https://tecplata.com/",
+      "location": "Argentina",
+      "employment_type": "FULL-TIME",
+      "image": "images/code.jpeg",
+      "description": "- Team member of small team that developed a Business Portal for a leading port operator worldwide\r\n- Performed various tasks both integration and Web development.\r\n- Definition of guidelines and best practices for SOA governance for the portuary ecosystem.\r\n- Web development under Spring MVC\r\n- Research and development under portuary terminal operating systems",
+      "start_date": "2014-08-01T22:45:54Z",
+      "end_date": "2015-03-01T22:46:09Z",
+      "current": false,
+      "technologies": [
+        7,
+        8,
+        11,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22
+      ]
+    }
+  },
+  {
+    "model": "app.job",
+    "pk": 7,
+    "fields": {
+      "title": "Java Developer",
+      "company": "Globant",
+      "url_company": "http://www.globant.com",
+      "project": "Disney Parks and Resorts Online",
+      "url_project": "https://disneyworld.disney.go.com/",
+      "location": "Argentina",
+      "employment_type": "FULL-TIME",
+      "image": "images/Screen_Shot_2020-01-03_at_19.39.26_z0CvSZP.png",
+      "description": "- Built, tested and deployed scalable, highly available and modular software products\r\n- Modified existing software to correct errors, adapt to new hardware and improve performance\r\n- Worked closely with clients to establish problem specifications and system designs\r\n- Performed regression and system-level testing to verify software quality and function before it was released\r\n- Translated business goals, feature concepts and customer needs into prioritized product requirements and use cases\r\n- Translated technical specifications into detailed product requirements\r\n- Lead bi-weekly Scrum planning meetings to develop team strategies and define project goals",
+      "start_date": "2011-08-01T22:48:13Z",
+      "end_date": "2014-06-01T22:48:32Z",
+      "current": false,
+      "technologies": [
+        7,
+        8,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        25
+      ]
+    }
+  },
+  {
+    "model": "app.job",
+    "pk": 8,
+    "fields": {
+      "title": "Java Developer",
+      "company": "Hewlett-Packard",
+      "url_company": "https://www.hpe.com/emea_europe/en/home.html",
+      "project": "American Airlines - Business Extra",
+      "url_project": "https://www.businessextra.com/",
+      "location": "Argentina",
+      "employment_type": "FULL-TIME",
+      "image": "",
+      "description": "- Worked as an Application Developer in a JEE project for American Airlines, Based in Dallas Texas\r\n- The primary task was to implement new functionality to the site and restructure the old code to make it easier to understand and to maintain while preserving its functionality\r\n- Developed robust Java code for several enterprises applications",
+      "start_date": "2010-04-01T22:51:06Z",
+      "end_date": "2011-08-01T22:51:13Z",
+      "current": false,
+      "technologies": [
+        7,
+        11,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    }
+  },
+  {
+    "model": "app.job",
+    "pk": 9,
+    "fields": {
+      "title": "Jr IT Specialist",
+      "company": "IBM",
+      "url_company": "https://www.ibm.com/ar-es",
+      "project": "Telefonica",
+      "url_project": "https://www.telefonica.com/es/home",
+      "location": "Argentina",
+      "employment_type": "FULL-TIME",
+      "image": "",
+      "description": "- Participated in the Maintenance and Development of a of Web Application for Telefonica Project.\r\n- Developed and Maintain the Application with Different frameworks andtechnologies based in JAVA, such as Struts, iBatis, EJB, JBOSS, SunOne7, ANT,XML, JSP and Web Technologies like HTML, CSS, JavaScript, Ajax (Prototype)\r\n- Created a new schema for the database of the Web Application, with Oracle 9i version",
+      "start_date": "2007-12-01T22:53:02Z",
+      "end_date": "2010-04-01T22:53:30Z",
+      "current": false,
+      "technologies": [
+        7,
+        11,
+        14,
+        15
+      ]
+    }
+  }
+]
