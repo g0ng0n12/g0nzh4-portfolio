@@ -430,3 +430,13 @@ p.copyright {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
+.not-found h1{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Satisfy', cursive;
+}
+
+.not-found img{
+    align-items: center;
+}

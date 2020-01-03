@@ -37,3 +37,7 @@ def get_projects(request):
 def get_project(request, project_id):
     project = get_object_or_404(Project, pk=project_id)
     return render(request, 'projects/project_details.html', {'project': project})
+
+
+def handler404(request, exception):
+    return render(request, '404.html')

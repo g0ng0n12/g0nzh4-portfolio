@@ -19,7 +19,7 @@ from app import views, api_views
 from django.conf.urls.static import static
 from django.conf import settings
 
-
+handler404 = 'app.views.handler404'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
