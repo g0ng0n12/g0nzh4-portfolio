@@ -431,12 +431,12 @@ p.copyright {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.not-found h1{
+.error-page h1{
     text-align: center;
     color: #FFFFFF;
     font-family: 'Satisfy', cursive;
 }
 
-.not-found img{
+.error-page img{
     align-items: center;
 }

@@ -20,6 +20,7 @@ def get_job(request, job_id):
 
 
 def get_certifications(request):
+    raise ValueError
     certifications = Certification.objects.all()
     return render(request, 'certifications/certifications_list.html', {'jobs': certifications})
 
@@ -41,3 +42,7 @@ def get_project(request, project_id):
 
 def handler404(request, exception):
     return render(request, '404.html')
+
+
+def handler500(request, exception):
+    return render(request, '500.html')
