@@ -1,3 +1,14 @@
+{% load static %}
 <div class="container">
-  <p> {{ job.id }}</p>
+    <div class="job-details">
+        <img class="image" src="{{ MEDIA_URL }} {{ job.image }} ">
+        <p class="title">{{ job.title }} <i class="fas fa-at"></i> {{ job.company }}</p>
+        <div class="project">
+            Project name: {{  job.project }} -
+            {{ job.start_date |date:"M"}} {{ job.start_date |date:"Y" }} | {{ job.end_date |date:"M" }} {{ job.end_date |date:"Y"}}
+        </div>
+        {% for description in job.get_description %}
+            {% if description and description.strip %} <p class="description"><i class="fas fa-star"></i> {{ description }}</p> {% endif %}
+        {% endfor %}
+    </div>
 </div>

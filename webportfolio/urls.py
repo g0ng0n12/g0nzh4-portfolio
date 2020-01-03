@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app import views, api_views
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
@@ -31,4 +33,4 @@ urlpatterns = [
     # API endpoints
     path('api/v1/jobs/<int:id>', api_views.JobList.as_view()),
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

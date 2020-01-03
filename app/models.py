@@ -22,7 +22,7 @@ class Job(models.Model):
     project = models.CharField(max_length=50, null=True)
     location = models.CharField(max_length=50)
     employment_type = models.CharField(choices=EMPLOYMENT_TYPE, max_length=70)
-    image = models.ImageField(upload_to='images/', null=True)
+    image = models.ImageField(blank=True, null=True, default=None, upload_to='images/')
     description = models.CharField(max_length=200)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
@@ -30,6 +30,9 @@ class Job(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_description(self):
+        return self.description.split('-')
 
 
 class Certification(models.Model):

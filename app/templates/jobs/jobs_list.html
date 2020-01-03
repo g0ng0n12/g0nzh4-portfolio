@@ -9,26 +9,30 @@
             </div>
             <ul class="jobs">
                 {% for job in jobs %}
-                    <a href="jobs/{{ job.id }}" id="manual-ajax" rel="modal:open">
-                        LALALA
-                    </a>
 
                     <li class="job">
-                        <div class="info">
-                            <p class="job-title semi-bold">{{ job.title }} @ <a
-                                    href="{{ job.url_company }}"> {{ job.company }}</a></p>
+
+                        <div class="info" >
+
+                            <p class="job-title semi-bold">
+                                {{ job.title }} @
+                                <a href="{{ job.url_company }}"> {{ job.company }}</a>
+                            </p>
                             <p class="job-project">{{ job.project }}</p>
                             <p class="date">{{ job.start_date |date:"M" }} {{ job.start_date |date:"Y" }}
                                 - {{ job.end_date |date:"M" }} {{ job.end_date |date:"Y" }}
                                 - {{ job.employment_type }}</p>
-
                             <p class="technologies">Technologies:</p>
                             <ul class="tags">
                                 {% for tech in job.technologies.all %}
                                     <li><a href="#" class="tag">{{ tech }}</a></li>
                                 {% endfor %}
                             </ul>
+                             <a class="more-details" href="jobs/{{ job.id }}" id="manual-ajax" rel="modal:open">
+                                <i class="fas fa-plus-circle">More Details</i>
+                            </a>
                         </div>
+
                     </li>
                 {% endfor %}
             </ul>

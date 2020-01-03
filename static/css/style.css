@@ -198,6 +198,12 @@ img.avatar {
 .work_exp .date {
     font-size: 1em;
     font-weight: 500;
+    margin-bottom: 10px;
+}
+.work_exp .more-details{
+    font-size: 0.5em;
+    font-weight: 500;
+    color: #3f7f7c;
 }
 
 .work_exp .technologies {
@@ -260,6 +266,28 @@ img.avatar {
 
 .work_exp .tag:hover::after {
     border-left-color: #7accc8;
+}
+
+/* Job Detail
+----------------------------------------------------*/
+.job-details {
+    color: #3f7f7c;
+}
+.job-details .title{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.job-details .title i{
+    font-size: 0.8em;
+}
+.job-details .project{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.job-details .description{
+    margin-bottom: 0;
 }
 
 /* Footer
