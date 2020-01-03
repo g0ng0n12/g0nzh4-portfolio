@@ -16,8 +16,7 @@ def get_jobs(request):
 
 def get_job(request, job_id):
     job = get_object_or_404(Job, pk=job_id)
-    return JsonResponse(job)
-    # return HttpResponse(json.dumps(job), content_type="application/json")
+    return render(request, 'jobs/job_detail.html', {'job': job})
 
 
 def get_certifications(request):
