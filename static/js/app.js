@@ -34,3 +34,44 @@ $('#manual-ajax').click(function (event) {
         $(html).appendTo('modal').modal();
     });
 });
+
+$(function () {
+    let gridContainer = $('#shuffleContainer');
+    let sizer = gridContainer.find('.certification-item');
+
+    gridContainer.shuffle ({
+        sizer: sizer,
+        speed: 500,
+        easing: 'ease-out'
+    });
+
+    $('#btnAll').on('click', function () {
+        gridContainer.shuffle('shuffle', function($el, shuffle) {
+            return true;
+        });
+    });
+
+    $('#btnFurniture').on('click', function () {
+        gridContainer.shuffle('shuffle', function($el, shuffle) {
+            return $el.data('group') == 'furniture';
+        });
+    });
+
+    $('#btnPet').on('click', function () {
+        gridContainer.shuffle('shuffle', function($el, shuffle) {
+            return $el.data('group') == 'pet';
+        });
+    });
+
+    $('#btnElectronic').on('click', function () {
+        gridContainer.shuffle('shuffle', function($el, shuffle) {
+            return $el.data('group') == 'electronic';
+        });
+    });
+
+    $('#btnTransportation').on('click', function () {
+        gridContainer.shuffle('shuffle', function($el, shuffle) {
+            return $el.data('group') == 'transportation';
+        });
+    });
+});

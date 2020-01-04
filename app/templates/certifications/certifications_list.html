@@ -6,16 +6,15 @@
             <h2 class="bold">Licenses & Certifications</h2>
         </div>
 
-        <div class="row">
+        <div id="shuffleContainer" class="row">
             <div class="three columns">
                 {% for certification in certifications %}
                     <a class="more-details" href="certifications/{{ certification.id }}" id="manual-ajax" rel="modal:open">
-                        <div class="certification-item">
+                        <div class="certification-item" id="certification-item" data-group="{{ certification.name }}">
                             <img class="image" src="{{ MEDIA_URL }} {{ certification.image }} ">
-                            <h4>{{ certification.name }}</h4>
-                                <h4>Issued: {{ certification.finish_date | date:"M" }}
+                            <h4>{{ certification.name }} by {{ certification.issuing_organization }}</h4>
+                            <h4>Issued: {{ certification.finish_date | date:"M" }}
                                     -{{ certification.finish_date |date:"Y" }}</h4>
-                            <h4>{{ certification.issuing_organization }}</h4>
                         </div>
                     </a>
                 {% endfor %}
