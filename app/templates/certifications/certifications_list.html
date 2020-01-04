@@ -5,21 +5,28 @@
         <div class="title">
             <h2 class="bold">Licenses & Certifications</h2>
         </div>
-
-        <div id="shuffleContainer" class="row">
-            <div class="three columns">
+        <div class="row">
+            <div class="tag" id="btnAll">All</div>
+            {% for tech in technologies %}
+                <button class="tag" id="btn{{ tech }}">{{ tech }}</button>
+            {% endfor %}
+        </div>
+            <div class="row my-shuffle-container">
                 {% for certification in certifications %}
-                    <a class="more-details" href="certifications/{{ certification.id }}" id="manual-ajax" rel="modal:open">
-                        <div class="certification-item" id="certification-item" data-group="{{ certification.name }}">
+                    <div class="three columns certification-item" data-groups='{{ certification.technology }}'>
+                        <a class="more-details" href="certifications/{{ certification.id }}" id="manual-ajax" rel="modal:open">
                             <img class="image" src="{{ MEDIA_URL }} {{ certification.image }} ">
                             <h4>{{ certification.name }} by {{ certification.issuing_organization }}</h4>
                             <h4>Issued: {{ certification.finish_date | date:"M" }}
                                     -{{ certification.finish_date |date:"Y" }}</h4>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 {% endfor %}
             </div>
+            <div class="twelve columns my-sizer-element"></div>
+
         </div>
+
     </div>
 
 

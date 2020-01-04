@@ -30,48 +30,52 @@ $('#manual-ajax').click(function (event) {
     event.preventDefault();
     this.blur(); // Manually remove focus from clicked link.
     $.get(this.href, function (html) {
-        console.log(html)
         $(html).appendTo('modal').modal();
     });
 });
 
-$(function () {
-    let gridContainer = $('#shuffleContainer');
-    let sizer = gridContainer.find('.certification-item');
+$('#shuffleContainer').ready(function () {
+    const Shuffle = window.Shuffle;
+    const element = document.querySelector('.my-shuffle-container');
+    const sizer = element.querySelector('.my-sizer-element');
 
-    gridContainer.shuffle ({
+    let shuffleInstance = new Shuffle(element, {
+      itemSelector: '.certification-item',
         sizer: sizer,
         speed: 500,
-        easing: 'ease-out'
+        delimiter: ','
     });
 
     $('#btnAll').on('click', function () {
-        gridContainer.shuffle('shuffle', function($el, shuffle) {
-            return true;
-        });
+        console.log("all Bitches")
+         shuffleInstance.filter();
     });
 
-    $('#btnFurniture').on('click', function () {
-        gridContainer.shuffle('shuffle', function($el, shuffle) {
-            return $el.data('group') == 'furniture';
-        });
+    $("#btnJava").on("click", function () {
+        shuffleInstance.filter('Java')
     });
 
-    $('#btnPet').on('click', function () {
-        gridContainer.shuffle('shuffle', function($el, shuffle) {
-            return $el.data('group') == 'pet';
-        });
+    $("#btnReactJs").on("click", function () {
+        shuffleInstance.filter('ReactJs')
     });
 
-    $('#btnElectronic').on('click', function () {
-        gridContainer.shuffle('shuffle', function($el, shuffle) {
-            return $el.data('group') == 'electronic';
-        });
+    $("#btnPython").on("click", function () {
+        shuffleInstance.filter('Python')
     });
 
-    $('#btnTransportation').on('click', function () {
-        gridContainer.shuffle('shuffle', function($el, shuffle) {
-            return $el.data('group') == 'transportation';
-        });
+    $("#btnDjango").on("click", function () {
+        shuffleInstance.filter('Django')
+    });
+
+    $("#btnJavascript").on("click", function () {
+        shuffleInstance.filter('Javascript')
+    });
+
+    $("#btnNodejs").on("click", function () {
+        shuffleInstance.filter('NodeJs')
+    });
+
+    $("#btnVuejs").on("click", function () {
+        shuffleInstance.filter('VueJs')
     });
 });
