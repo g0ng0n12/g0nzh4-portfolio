@@ -33,4 +33,5 @@ urlpatterns = [
     # API endpoints
     path('api/v1/jobs/<int:id>', api_views.JobList.as_view()),
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

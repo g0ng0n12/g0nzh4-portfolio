@@ -23,7 +23,7 @@ class Job(models.Model):
     url_project = models.URLField(max_length=200, null=True)
     location = models.CharField(max_length=50)
     employment_type = models.CharField(choices=EMPLOYMENT_TYPE, max_length=70)
-    image = models.ImageField(blank=True, null=True, default=None, upload_to='images/')
+    image = models.ImageField(blank=True, null=True, default=None, upload_to='media/images/')
     description = models.TextField(null=True, blank=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
@@ -39,7 +39,7 @@ class Job(models.Model):
 
 class Certification(models.Model):
     name = models.CharField(max_length=50)
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='media/images/')
     issuing_organization = models.CharField(max_length=50)
     description = models.CharField(max_length=200)
     finish_date = models.DateTimeField()
@@ -55,7 +55,7 @@ class Project(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=200)
     url = models.URLField(max_length=200)
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='media/images/')
     technologies = models.ManyToManyField(Technology)
 
     def __str__(self):

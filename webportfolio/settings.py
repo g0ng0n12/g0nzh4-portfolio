@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9#7_0fpbi7!vl=7t^^m))icr)q1q38@5ab(s8b%hd=2(-$(o7m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -125,5 +125,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'images'))
-MEDIA_URL = 'images/'
+MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, '','media/'))
+MEDIA_URL = '/images/'

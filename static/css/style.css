@@ -339,11 +339,11 @@ p.copyright {
 
 /* Certification
 ----------------------------------------------------*/
-.container .certification-title h1{
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 3em;
-    font-family: 'Satisfy', cursive;
+.main .certification-item h4{
+    text-align: left;
+    margin-bottom: 0px;
+    font-size: 1em;
+    font-family: 'abel', cursive;
 }
 
 /* Media Queries

@@ -9,9 +9,9 @@
 			<div class="three columns">
                 {% for certification in certifications %}
                     <div class="certification-item">
-                        <p>{{ certification.name }}</p>
-                        <p>{{ certification.image }}</p>
-                        <p>{{ certification.issuing_organization }}</p>
+                        <img class="image" src="{{ MEDIA_URL }} {{ certification.image }} ">
+                        <h4>{{ certification.name }}</h4>
+                        <h4>{{ certification.issuing_organization }}</h4>
                     </div>
                 {% endfor %}
             </div>
