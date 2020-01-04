@@ -2,7 +2,20 @@
 {% load static %}
 {% block content %}
 <div class="container main">
-certifications
+        <div class="title">
+            <h2 class="bold">Certifications & Courses</h2>
+        </div>
+        <div class="row">
+			<div class="three columns">
+                {% for certification in certifications %}
+                    <div class="certification-item">
+                        <p>{{ certification.name }}</p>
+                        <p>{{ certification.image }}</p>
+                        <p>{{ certification.issuing_organization }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
 </div>
 
 

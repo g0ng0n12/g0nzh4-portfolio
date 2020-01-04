@@ -20,9 +20,8 @@ def get_job(request, job_id):
 
 
 def get_certifications(request):
-    raise ValueError
     certifications = Certification.objects.all()
-    return render(request, 'certifications/certifications_list.html', {'jobs': certifications})
+    return render(request, 'certifications/certifications_list.html', {'certifications': certifications})
 
 
 def get_certification(request, certification_id):
