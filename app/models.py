@@ -5,6 +5,7 @@ from django.db import models
 class Technology(models.Model):
     name = models.CharField(max_length=50, unique=True)
     yoe = models.IntegerField()
+    has_certification = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
