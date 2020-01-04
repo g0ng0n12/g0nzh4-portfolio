@@ -342,7 +342,8 @@ p.copyright {
 .main .certification-item h4{
     text-align: left;
     margin-bottom: 0px;
-    font-size: 1em;
+    font-size: 2em;
+    font-weight: 500;
     font-family: 'abel', cursive;
 }
 
