@@ -44,8 +44,8 @@ class Certification(models.Model):
     description = models.CharField(max_length=200)
     finish_date = models.DateTimeField()
     url = models.URLField(max_length=200)
-    certification_id = models.CharField(max_length=50)
-    technologies = models.ManyToManyField(Technology)
+    identifier = models.CharField(max_length=50)
+    technology = models.ForeignKey(Technology, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.name
