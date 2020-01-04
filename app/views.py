@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Job, Certification, Project
+from .models import Job, Certification, Project, Technology
 from django.http import JsonResponse, HttpResponse
 import json
 
@@ -21,7 +21,9 @@ def get_job(request, job_id):
 
 def get_certifications(request):
     certifications = Certification.objects.all()
-    return render(request, 'certifications/certifications_list.html', {'certifications': certifications})
+    technologies = Technology.objects.filter(has_certification=True)
+    return render(request, 'certifications/certifications_list.html',
+                  {'certifications': certifications, 'technologies': technologies})
 
 
 def get_certification(request, certification_id):
