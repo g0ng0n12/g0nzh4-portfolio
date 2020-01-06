@@ -1,5 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+    <div class="container main">
+        <div class="title">
+            <h2 class="bold">Projects</h2>
+        </div>
+        <div class="row">
+            <div class="tag" id="btnAll">All</div>
+            {% for tech in technologies %}
+                <button class="tag" id="btn{{ tech }}">{{ tech }}</button>
+            {% endfor %}
+        </div>
+            <div class="row my-shuffle-container">
+                {% for project in projects %}
+                    <div class="three columns certification-item" data-groups='{{ project.technology }}'>
+                        <a class="more-details" href="#" id="manual-ajax" rel="modal:open">
+                            <img class="image" src="{{ MEDIA_URL }} {{ project.image }} ">
+                            <h4>{{ project.name }}</h4> <a href="{{ project.url }}">
+                            <i class="fas fa-code-branch"></i></a>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="twelve columns my-sizer-element"></div>
+
+        </div>
+
+    </div>
+
 
 {% endblock %}
