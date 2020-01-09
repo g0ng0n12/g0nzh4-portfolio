@@ -42,9 +42,8 @@ def get_project(request, project_id):
 
 
 def get_readings(request):
-    readings = Reading.objects.all()
+    readings = Reading.objects.order_by('-finish_date')
     return render(request, 'readings/readings_list.html', {'readings': readings})
-
 
 
 def handler404(request, exception):
