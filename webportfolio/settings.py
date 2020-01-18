@@ -25,7 +25,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['157.245.86.103', 'g0ng0n.dev', 'www.g0ng0n.dev']
+if DEBUG == True:
+    ALLOWED_HOSTS = ['127.0.0.1']
+else:
+    ALLOWED_HOSTS = ['157.245.86.103', 'g0ng0n.dev', 'www.g0ng0n.dev']
 
 
 # Application definition
@@ -73,18 +76,24 @@ WSGI_APPLICATION = 'webportfolio.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER_NAME'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT'),
+if DEBUG == False:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.environ.get('DB_NAME'),
+            'USER': os.environ.get('DB_USER_NAME'),
+            'PASSWORD': os.environ.get('DB_PASSWORD'),
+            'HOST': os.environ.get('DB_HOST'),
+            'PORT': os.environ.get('DB_PORT'),
+        }
     }
-}
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
