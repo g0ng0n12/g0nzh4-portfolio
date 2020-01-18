@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="container main">
+        <div class="title">
+            <h2 class="bold">Readings</h2>
+        </div>
+        <div class="row my-shuffle-container">
+            {% for read in readings %}
+
+            {% endfor %}
+        </div>
+        <div class="twelve columns my-sizer-element"></div>
+
+    </div>
+
+{% endblock %}

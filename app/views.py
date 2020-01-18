@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Job, Certification, Project, Technology
+from .models import Job, Certification, Project, Technology, Reading
 from django.http import JsonResponse, HttpResponse
 import json
 
@@ -39,6 +39,11 @@ def get_projects(request):
 def get_project(request, project_id):
     project = get_object_or_404(Project, pk=project_id)
     return render(request, 'projects/project_details.html', {'project': project})
+
+
+def get_readings(request):
+    readings = Reading.objects.order_by('-finish_date')
+    return render(request, 'readings/readings_list.html', {'readings': readings})
 
 
 def handler404(request, exception):

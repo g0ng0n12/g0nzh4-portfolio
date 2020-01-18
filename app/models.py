@@ -61,3 +61,17 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Note(models.Model):
+    Note = models.TextField(null=True, blank=True)
+    lang = models.CharField(max_length=50)
+
+
+class Reading(models.Model):
+    name = models.CharField(max_length=50)
+    notes = models.ForeignKey(Note, on_delete=models.CASCADE, null=True)
+    url = models.URLField(max_length=200)
+    finish_date = models.DateTimeField()
+    author = models.CharField(max_length=50)
+    url_image = models.URLField(max_length=200)
