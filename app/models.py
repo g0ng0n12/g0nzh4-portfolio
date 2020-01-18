@@ -40,7 +40,7 @@ class Job(models.Model):
 
 class Certification(models.Model):
     name = models.CharField(max_length=50)
-    image = models.ImageField(upload_to='media/images/')
+    image = models.ImageField(upload_to='media/')
     issuing_organization = models.CharField(max_length=50)
     description = models.CharField(max_length=200)
     finish_date = models.DateTimeField()
